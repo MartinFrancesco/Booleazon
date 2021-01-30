@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cd;
+use Illuminate\Support\Str;
 
 class CdController extends Controller
 {
@@ -36,7 +37,27 @@ class CdController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $data = $request->all();
+        $request->validate([
+            'titolo' => 'required | max:255',
+            'artista' => 'required | max:255',
+            'genere' => 'required | max:255',
+            'anno' => 'numeric | between:1500,2050',
+            'prezzo' => 'required |  numeric | between:0,1000',   
+            'cover' =>    'image'    
+        ]);
+        $slug = Str::slug('titolo', '-');
+
+        // Salvataggio dati metodo $fillable
+        $newCd = new Cd();
+        $newCd->fill($data);
+        $save = $newCd->save();
+
+        if( $save === true ){
+            return redirect()->route('cds.index' );
+        }
+
     }
 
     /**

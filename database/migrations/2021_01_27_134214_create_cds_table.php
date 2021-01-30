@@ -20,7 +20,7 @@ class CreateCdsTable extends Migration
             $table->string('genere');
             $table->year('anno')->nullable();
             $table->string('prezzo', 10);
-            $table->boolean('disponibilità');
+            $table->boolean('disponibilità')->nullable();
             $table->string('cover')->nullable();
             $table->string('slug');
             $table->timestamps();
