@@ -3,7 +3,7 @@
 @section('content')
 
     {{-- Vista --}}
-    <h1>Booleazon</h1>
+    <h1>Booleazon MASTER</h1>
 
 
     <div>
