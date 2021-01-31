@@ -99,6 +99,12 @@ class CdController extends Controller
     {
         $data = $request->all();
         $cd = Cd::find($id);
+        
+        $data['slug'] = Str::slug($data['titolo'], '-');
+        $updated = $cd->update($data);
+        if($updated) {
+            return redirect()->route('cds.show', $cd->id);
+        }
     }
 
     /**
