@@ -115,3 +115,65 @@ img {
   transition: 0.5s;
 }
 
+header {
+  background: #E7EDEF;
+}
+
+header .header-top {
+  height: 50px;
+  padding: 20px 10px;
+}
+
+header .header-top ul {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  list-style: none;
+}
+
+header .header-top ul li > a {
+  color: #000;
+}
+
+header .header-bottom navbar {
+  padding: 5px;
+}
+
+header .header-bottom navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  list-style: none;
+}
+
+header .header-bottom navbar ul li {
+  font-size: 14px;
+  padding: 10px 20px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+}
+
+header .header-bottom navbar ul li:hover,
+header .header-bottom navbar ul li:hover > a {
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+}
+
+header .header-bottom navbar ul li a {
+  color: grey;
+}
+
+header .header-bottom navbar ul li a:hover {
+  text-decoration: none;
+}
+
+header .header-bottom navbar ul li input {
+  border: none;
+}
+
+header .header-bottom navbar ul li input:focus {
+  outline: none;
+}
+
