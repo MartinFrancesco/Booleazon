@@ -5,27 +5,6 @@
     {{-- Vista --}}
     <h1>HOME PROVA</h1>
 
-    {{-- CARD (DAVID--> VA IN SHOP) --}}
-    {{-- <div>
-        <div class="container-card">
-                    <div class="card" id="salsa">
-                        <div class="img-bx">
-                            <img src="{{ asset('images/t-shirt.png') }}" alt="">
-                        </div>
-                        <div class="content-bx">
-                            <h2></h2>
-                            <div class="dates">
-                               
-                            </div>
-                            <div class="coaches">
-                            </div>
-                            <a href="#">Guarda dettaglio</a>
-                        </div>
-                    </div>
-            </div>
-    </div> --}}
-
-
     <!-- The video -->
     <video autoplay muted loop id=“myVideo”>
     <source src=“rain.mp4" type=“video/mp4”>
