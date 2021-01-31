@@ -5,6 +5,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+main {
+  background: #E7EDEF;
+}
+
 .container-card {
   position: relative;
   margin: 30px 40px;
@@ -79,10 +83,5 @@
   height: 180px;
   display: block;
   transition: 0.5s;
-}
-
-header {
-  height: 150px;
-  background: #4848d8;
 }
 
