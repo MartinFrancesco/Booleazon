@@ -23,7 +23,13 @@
                         <td>{{$cd->prezzo}} €</td>
                         <td class="text-center" width="100"><a href="{{route('cds.show', $cd->id)}}" class="btn btn-primary">SHOW</a></td>
                         <td class="text-center" width="100"><a href="{{route('cds.edit', $cd->id)}}" class="btn btn-info">EDIT</a></td>
-                        <td class="text-center" width="100"><a href="{{route('cds.destroy', $cd->id)}}" class="btn btn-danger">DELETE</a></td>
+                        <td class="text-center" width="100">
+                            <form action="{{ route('cds.destroy', $cd->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" class="btn btn-danger" value="Delete">
+                            </form>
+                        </td>
                         
                     </tr>
                     

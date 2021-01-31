@@ -81,9 +81,12 @@ class CdController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($slug)
+    public function edit($id)
     {
-        $cd = Cd::where('slug', $slug)->first();
+        // $cd = Cd::where('slug', $slug)->first();
+        // return view('cds.edit', compact('cd'));
+
+        $cd = Cd::find($id);
         return view('cds.edit', compact('cd'));
         
     }
@@ -103,7 +106,7 @@ class CdController extends Controller
         $data['slug'] = Str::slug($data['titolo'], '-');
         $updated = $cd->update($data);
         if($updated) {
-            return redirect()->route('cds.show', $cd->id);
+            return redirect()->route('cds.index', $cd->id);
         }
     }
 
